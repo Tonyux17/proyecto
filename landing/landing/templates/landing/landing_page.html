@@ -1,0 +1,220 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page de Tenis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Tipografía */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background: #f4f4f4;
+            color: #333; /* Color de texto general */
+        }
+
+        /* Contenedor */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header */
+        header {
+            background: #add8e6; /* Fondo blanco para un look limpio */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+            color: #333; /* Color de texto oscuro para mejor contraste */
+            padding: 20px 0;
+            margin: 2rem;
+        }
+
+        header a {
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+            color: #3498db; /* Color azul para destacar la marca */
+            font-weight: 700;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header .highlight, header .current a {
+            color: #3498db; /* Mantenemos el azul para los elementos activos o destacados */
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: #2980b9; /* Un tono de azul un poco más oscuro para el hover */
+        }
+
+
+        /* Banner */
+        #showcase {
+            min-height: 500px;
+            background: url('{% static 'landing/images/banner2.jpg' %}') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ecf0f1;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilos del título y el subtítulo */
+        #showcase h1 {
+            font-size: 4em;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+            color: #2980b9; /* Azul */
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #showcase p {
+            font-size: 1.5em;
+            width: 60%;
+            margin: auto;
+            color: #ecf0f1;
+        }
+
+        /* Newsletter */
+        #newsletter {
+            padding: 15px;
+            color: #fff;
+            background: #3498db; /* Azul brillante */
+            text-align: center;
+        }
+
+        /* Sobre nosotros */
+        #about {
+            background: #ecf0f1;
+            padding: 50px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Estilos de las cajas de características */
+        #boxes .box {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ... otros estilos ... */
+
+        /* Footer */
+        footer {
+            background: #34495e; /* Azul oscuro */
+            padding: 20px 0;
+            color: #ecf0f1;
+            text-align: center;
+        }
+
+        /* Media Queries */
+        @media(max-width: 768px){
+            /* ... ajustes responsivos ... */
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Runners</span> Realm</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">Inicio</a></li>
+                    <li><a href="#boxes">Características</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase" style="background: url('{% static 'landing/images/banner2.jpg' %}') no-repeat center center; background-size: cover; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+        <div class="container" style="text-align: center;">
+            <h1 style="color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">👟  Descubre la Tienda de Zapatos  👟</h1>
+            <p style="color: #ffffff; max-width: 600px; margin-left: auto; margin-right: auto;">Somos una tienda dedicada a la venta de zapatos casuales de las marcas más reconocidas, como nike,converse, vans, skechers y más.</p>
+        </div>
+    </section>
+    
+    
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Suscríbete a Nuestra pagina de Tenis</h1>
+            <form>
+                <input type="email" placeholder="Ingresa tu Email...">
+                <button type="submit" class="button_1">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <div style="text-align: center;">
+                <img src="{% static 'landing/images/icono1.png' %} ">
+                <h3>Innovación</h3>
+                <p>Nuestra gama de productos es el fruto de un constante proceso de innovación y nuestro inquebrantable compromiso con los más altos estándares de calidad. Cada artículo que ofrecemos refleja nuestra dedicación a la excelencia y la búsqueda constante de la perfección.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div style="text-align: center;">
+                <img src="{% static 'landing/images/icono2.png' %}">
+                <h3>Diseño</h3>
+                <p>Nuestros diseños, además de ser intuitivos, están meticulosamente creados para brindar una experiencia de usuario excepcional, combinando estética y funcionalidad de manera inigualable.</p>
+            </div>
+            </div>
+            <div class="box">
+                <div style="text-align: center;">
+                <img src="{% static 'landing/images/icono3.png' %}">
+                <h3>Eficiencia</h3>
+                <p>Aumenta tu productividad al máximo con nuestras soluciones que están diseñadas para ahorrarte tiempo y esfuerzo.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una empresa dedicada a la venta de tenis de alta calidad, con un enfoque en el diseño, la comodidad y el rendimiento. Nuestro equipo está comprometido con la excelencia y la innovación constante para ofrecerte los mejores productos del mercado.</p>
+            <div class="about-info">
+                <img src="{% static 'landing/images/tiendas.jpg' %}" alt="Sobre Nosotros" style="width: 500px; height: auto;">
+                <p>Con años de experiencia en la industria del calzado deportivo, hemos establecido una marca de confianza entre corredores y atletas. Nuestra pasión por el deporte y la moda se refleja en cada par de tenis que ofrecemos, garantizando que cada cliente reciba la mejor experiencia de compra y productos de la más alta calidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Jousef Antonio Urrutia Guevara  &copy; 2023</p>
+    </footer>
+</body>
+</html>
